@@ -1,10 +1,11 @@
 body{
 	box-sizing: border-box;
+	font-family: 'Playfair Display', serif;
 }
 
 header{
 	position: relative;
-	font-family: 'Source Sans Pro', sans-serif;
+	
 	margin-top: 14rem;
 	margin-left:10rem;
 }
