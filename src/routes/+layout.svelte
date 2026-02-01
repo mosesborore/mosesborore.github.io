@@ -1,7 +1,6 @@
 <script lang="ts">
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
-	import '$lib/assets/fonts/inter.css';
   import {base} from '$app/paths';
 
 	let { children } = $props();
@@ -9,6 +8,9 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </svelte:head>
 
 <div class="fixed top-0 z-99999 w-full">
@@ -19,7 +21,7 @@
 		>
 			<ul class="m-2 flex items-center space-x-8 text-sm prose-a:hover:text-white">
 				<li><a href="{base}/">Home</a></li>
-				<li><a href="#about">About</a></li>
+				<li><a href="#skills">Skills</a></li>
 				<li><a href="#projects">Projects</a></li>
 			</ul>
 		</div>
