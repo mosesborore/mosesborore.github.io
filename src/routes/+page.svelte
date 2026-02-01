@@ -57,6 +57,10 @@
 			<button class="btn btn-outline btn-secondary"> Get in Touch </button>
 		</div>
 
+		<div class="w-full max-w-2xl text-center mb-4">
+			<div class="prose-lg text-center font-semibold tracking-wider md:prose-2xl"> Skills</div>
+		</div>
+
 		<div
 			id="skills"
 			class="prose grid w-full max-w-2xl grid-cols-2 gap-8 border-t border-slate-800 pt-8 md:gap-16 prose-p:text-sm"
@@ -69,6 +73,13 @@
 				<span class="mb-2 text-3xl font-bold md:text-4xl">2+</span>
 				<p>Years in Consultancy</p>
 			</div>
+		</div>
+
+		<div class="prose-sm mt-6 max-w-2xl text-center">
+			I am a technical consultant who works with companies to quickly diagnose and solve software
+			development problems, delivering solutions that are practical, scalable, and aligned with
+			business goals. I bridge the gap between technical teams and non-technical stakeholders,
+			making complex systems easier to understand and decisions easier to make.
 		</div>
 	</section>
 	<div class="flex animate-bounce justify-center text-center prose-slate">
