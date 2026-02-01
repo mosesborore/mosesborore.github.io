@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+@plugin 'daisyui' {
+	themes: abyss --default;
+}
+@plugin '@tailwindcss/typography';
+
+* {
+	font-family: 'Inter var', 'Arial Narrow', Arial, sans-serif;
+}
