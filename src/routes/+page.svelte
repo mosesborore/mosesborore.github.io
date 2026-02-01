@@ -1,5 +1,6 @@
 <script>
 	import AstrolinkLogo from '$lib/assets/astrolink.svg';
+	import { onMount } from 'svelte';
 	const ispTechUsed = [
 		'Django',
 		'PostgreSQL',
@@ -11,6 +12,20 @@
 		'Celery Task Queue',
 		'MPESA Daraja API'
 	];
+
+	let typedHeading = '';
+	const fullHeading = 'Building digital solutions that matter.';
+
+	onMount(() => {
+		let i = 0;
+		const speed = 60; // ms per character
+		const timer = setInterval(() => {
+			typedHeading += fullHeading[i];
+			i++;
+			if (i >= fullHeading.length) clearInterval(timer);
+		}, speed);
+		return () => clearInterval(timer);
+	});
 </script>
 
 <svelte:head>
@@ -29,10 +44,11 @@
 			Welcome to my portfolio
 		</div>
 		<h1
-			class="mb-6 max-w-4xl text-center text-7xl leading-tight font-bold tracking-tighter text-balance lg:text-8xl"
+		class="mb-6 max-w-4xl text-center text-7xl leading-tight font-bold tracking-tighter text-balance lg:text-8xl"
+		aria-live="polite"
 		>
-			Building digital solutions that matter.
-		</h1>
+		{typedHeading}<span class="caret" aria-hidden="true"></span>
+	</h1>
 
 		<div class="prose-sm mb-6 font-light">Majorly focused on backend software development.</div>
 
@@ -180,3 +196,17 @@
 		</div>
 	</section>
 </main>
+
+	<style>
+	/* Typewriter caret */
+	@keyframes blink { 0%, 50% { opacity: 1 } 50.01%, 100% { opacity: 0 } }
+	.caret {
+		display: inline-block;
+		width: 2px;
+		height: 1em;
+		background: currentColor;
+		margin-left: 6px;
+		vertical-align: text-bottom;
+		animation: blink 1s step-start infinite;
+	}
+	</style>
